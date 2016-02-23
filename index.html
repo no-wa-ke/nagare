@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nagare</title>
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+
+  <script>
+    $(function () {
+      var socket = io.connect('http://localhost:8000')
+      socket.on('push image', function (data) {
+        $('<img style="display: block;">').attr('src', data.dataUrl).prependTo($('body'));
+      });
+      console.log(data.dataUrl);
+    });
+  </script>
+</head>
+<body>
+  <p>hello world</p>
+</body>
+</html>
