@@ -39,7 +39,7 @@
     var d = (date.getMonth() + 1) + "-" + date.getDate() + "-" + date.getHours() + "-" + date.getMinutes() + "-" + date.getSeconds();
 
     tmpPath = req.files.file.path;
-    targetPath = path.resolve('./public/images/'+ d + '.gif');
+    targetPath = path.resolve('./public/images/'+ d + '.jpg');
 
 // public以下に移動
 	fs.rename(tmpPath, targetPath, function(err) {
@@ -69,7 +69,7 @@
 
 
 
-  server.listen(3000);
+  server.listen(3000);//aws port
 
 
 }).call(this);
