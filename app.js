@@ -2,7 +2,7 @@
 (function() {
   var app, express, fs, http, io, mime, multipart, multipartMiddleware, server, util,bodyParser,path, moniker;
 
-  moniker = require('Moniker')
+//  moniker = require('Moniker')
 
   path = require('path');
 
@@ -69,6 +69,7 @@
 
 
 
-  server.listen(8000);
+  server.listen(3000);
+
 
 }).call(this);
